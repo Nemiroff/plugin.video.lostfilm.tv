@@ -7,7 +7,7 @@ from support.plugin import plugin
 
 
 class LostFilmApi(AbstractScraper):
-    BASE_URL = "https://www.lostfilm.tv"
+    BASE_URL = "https://www.lostfilm.run"
     API_URL = BASE_URL + "/ajaxik.php"
 
     def __init__(self, cookie_jar=None, xrequests_session=None, max_workers=10):

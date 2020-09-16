@@ -76,7 +76,7 @@ TorrentLink = namedtuple('TorrentLink', ['quality', 'url', 'size'])
 
 
 class LostFilmScraper(AbstractScraper):
-    BASE_URL = "https://www.lostfilm.tv"
+    BASE_URL = "https://www.lostfilm.run"
     BLOCKED_MESSAGE = "Контент недоступен на территории Российской Федерации"
 
     def __init__(self, login, password, cookie_jar=None, xrequests_session=None, series_cache=None, shows_ids_cache=None, max_workers=10):

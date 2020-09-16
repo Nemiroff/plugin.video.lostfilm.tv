@@ -360,7 +360,7 @@ def check_site():
     import requests
     from support.services import antizapret
     az = antizapret()
-    r = requests.get('http://www.lostfilm.tv/',  proxies=az.get_proxy_list() if plugin.get_setting('use_proxy', bool) else None)
+    r = requests.get('http://www.lostfilm.run/',  proxies=az.get_proxy_list() if plugin.get_setting('use_proxy', bool) else None)
     return r
 
 
