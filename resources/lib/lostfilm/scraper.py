@@ -436,11 +436,9 @@ class LostFilmScraper(AbstractScraper):
 
     # new
     def get_torrent_links(self, series_id, season_number, episode_number):
-        doc = self.fetch(self.BASE_URL + '/v_search.php', {
-            'c': series_id,
-            's': season_number,
-            'e': episode_number
-        })
+        torr_id = str(series_id) + str(season_number).zfill(3) + str(episode_number).zfill(3)
+        url = "/v_search.php?a="+torr_id
+        doc = self.fetch(self.BASE_URL + url)
         if 'log in first' in doc.text:
             raise ScraperError(32003, "Authorization failed", check_settings=True)
         redirect = doc.find('a').attr('href')
